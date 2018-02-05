@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Criptare/Decriptare</title>
+  </head>
+  <body>
+      <h1>Program de criptare/decriptare fisiere RSA</h1>
+      <p>Silviu-Ioan Vilcu</p>
+      <!-- All of the Node.js APIs are available in this renderer process. -->
+      <label>Selectati fisierul</label>
+      <input id="file-asm-path" type="file" />
+      <button id="encrypt">Encrypt</button>
+      <button id="decrypt">Decrypt</button>
+      <br>
+      <hr>
+      <label>Numere prime</label>
+      <input id="p" type="number">
+      <input id="q" type="number">
+      <button id="generate">Generate keys</button>
+      <br>
+      <label>Cheia publica</label>
+      <input readonly id="public" />
+      <label>Cheia privata</label>
+      <input readonly id="private" />
+      <textarea id="view"></textarea>
+      <br />
+      <script>
+          // You can also require other files to run in this process
+          require('./renderer.js')
+      </script>
+  </body>
+</html>
